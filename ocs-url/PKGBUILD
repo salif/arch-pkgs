@@ -1,0 +1,34 @@
+# Maintainer: Salif Mehmed <salifm@protonmail.com>
+
+pkgname=ocs-url
+pkgver=3.1.20200925
+pkgrel=1
+pkgdesc="An install helper program for items served via OpenCollaborationServices (ocs://)."
+arch=("x86_64")
+url="https://www.opencode.net/dfn2/$pkgname"
+license=("GPL3")
+depends=("qt5-base" "qt5-svg" "qt5-declarative" "qt5-quickcontrols")
+makedepends=("git")
+conflicts=("xdgurl")
+provides=("xdgurl")
+source=("https://www.opencode.net/dfn2/ocs-url/-/archive/603ade25ef9aa5336b248ecfb9fca7f85c90162c/ocs-url-603ade25ef9aa5336b248ecfb9fca7f85c90162c.tar"
+        "https://github.com/akiraohgaki/qtil/archive/v0.4.0.tar.gz")
+sha256sums=("1bae96276f9655eb711e760b9cfcb58710f1d9efad08033be9f6466f1f3cbeba" "c1548d3f2ca5a2fc63fce60bea2c350dfcc656b03a4e00d86a9fdc0b43f22ec8")
+
+prepare() {
+    cd "$pkgname"-603ade25ef9aa5336b248ecfb9fca7f85c90162c
+    mkdir -p ./lib/qtil/
+    mv ../qtil-0.4.0/* ./lib/qtil/
+    ./scripts/prepare
+}
+
+build() {
+    cd "$pkgname"-603ade25ef9aa5336b248ecfb9fca7f85c90162c
+    qmake PREFIX="/usr"
+    make
+}
+
+package() {
+    cd "$pkgname"-603ade25ef9aa5336b248ecfb9fca7f85c90162c
+    make INSTALL_ROOT=$pkgdir install
+}
