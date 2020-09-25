@@ -6,6 +6,7 @@ then
     exit
 fi
 
+rm -rf ./BUILD
 mkdir BUILD
 mkdir BUILD/BUILDDIR
 mkdir BUILD/LOGDEST

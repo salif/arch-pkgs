@@ -2,8 +2,8 @@
 
 pkgname=hasher
 pkgver=1.2.0
-pkgrel=1
-pkgdesc="Hasher"
+pkgrel=2
+pkgdesc="Cli tool for hashing passwords"
 arch=("x86_64")
 url="https://salifm.github.io/hasher"
 license=("MIT")

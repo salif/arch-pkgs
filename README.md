@@ -20,3 +20,7 @@ Run the following command:
 ```
 # pacman -Syy
 ```
+
+## List of packages
+
+[keybase.pub/salifm_/linux/arch/x86_64/](https://keybase.pub/salifm_/linux/arch/x86_64/)
