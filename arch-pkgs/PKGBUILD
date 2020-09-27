@@ -1,0 +1,29 @@
+# Maintainer: Salif Mehmed <salifm@protonmail.com>
+
+pkgname=arch-pkgs
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="arch-pkgs"
+arch=("any")
+url="https://salifm.github.io/arch-pkgs"
+license=("MIT")
+depends=("gnupg")
+source=(".config" "add-key.sh" "build-shared.sh" "build.sh" "create-db.sh" "create-repo.sh"
+        "create-script.sh" "get-aur.sh" "m-db.sh" "setup.sh" "um-db.sh" "update-db.sh")
+sha256sums=("751d8110da0b8e880563670b8c7f72a028884618be9fda9286176814890ef7f6"
+            "cca686a57c07c9205c550afd3e970f71770b9109742035be722ed68f23136410"
+            "b8f445b79da5c2925ea9e3659fd5e41bb923870eb66b18cb9324777d7aab2766"
+            "ef6a16543adab40ea7ebb2944c1e59a9c18e84c4a3a1cbd366178555c0bff301"
+            "d4677e18450d5fb59348e10c7b4355a04377b571f2b577c1af8cd2938c74f71e"
+            "96e06e06dad82f2cbeed2f75217d5a67c704368e347ad4f0cba7c1bd75fa1db9"
+            "91ccb5e71ebf103430cb1c709ea3f33fd2ca8102dfd85b1d484122ec691bb069"
+            "60806cde373fe0d61c86dda502fd5ad5d9e01bab46f4f479c09706922a75c158"
+            "78dc5209c7b1cfca7a8ee1807529a5755a86cef0a7c3a9b529b5f93449b45e5d"
+            "9d2dd32d088b00bd2a4efd67c356d9a10f5c8210b60b108e771b4a100ad5f9c0"
+            "4779f36ed69c6646996005e690a510f9ef53e49b902e1c5a6d7bf71bd7452ed5"
+            "50cf61c5951f982dcbcff19f8986b26bc90fcd1a54c2678f73eebad9dbac40f9")
+
+package() {
+    install -d "$pkgdir"/usr/lib/"$pkgname"
+    install -m755 ./* "$pkgdir"/usr/lib/"$pkgname"
+}

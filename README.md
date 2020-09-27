@@ -1,3 +1,4 @@
+# Personal Arch Linux Repository
 
 ## Add the repo
 
@@ -23,4 +24,4 @@ Run the following command:
 
 ## List of packages
 
-[keybase.pub/salifm_/linux/arch/x86_64/](https://keybase.pub/salifm_/linux/arch/x86_64/)
+[keybase.pub/salifm_/linux/arch/x86_64](https://keybase.pub/salifm_/linux/arch/x86_64)
