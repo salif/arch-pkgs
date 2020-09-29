@@ -12,14 +12,17 @@ read -p "name: " name
 [ ! -d "$name" ] && echo "Error: '$name' does not exist!" && exit 1
 
 cp "$scripts"/build-shared.sh "$IN_DIR"/build.sh
-cp -r "$name" "$IN_DIR"/
+cp -r --force "$name" "$IN_DIR"/
+chmod 777 "$IN_DIR"/"$name"
+chmod 777 "$IN_DIR"/"$name"/PKGBUILD
+ls -la "$IN_DIR"/"$name"/
 sudo PGER="$PGER" IN_DIR="$IN_DIR" OUT_DIR="$OUT_DIR" PEXT="$PEXT" -u "$M_USER" "$IN_DIR"/build.sh
 [ ! $? -eq 0 ] && rm -rf "$IN_DIR"/* && exit 1
 {
     cd "$OUT_DIR"
     for f in *.temp; do
         b=$(basename "$f" .temp)
-        cp "$f" "$b"
+        cp --force "$f" "$b"
         rm -rf "$f"
         [ -f "$b".sig ] && rm -f "$b".sig
         gpg --detach-sign --use-agent -u "$GKEY" --no-armor "$b"

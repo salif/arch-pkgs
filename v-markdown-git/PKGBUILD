@@ -1,0 +1,26 @@
+# Maintainer: Salif Mehmed <salifm@protonmail.com>
+
+pkgname=v-markdown-git
+pkgver=0.1.1
+pkgrel=1
+pkgdesc="Markdown module for V"
+arch=("any")
+url="https://github.com/vlang/markdown"
+license=("MIT")
+depends=()
+makedepends=("git")
+provides=("${pkgname%-git}")
+source=("${pkgname%-git}::git+https://github.com/vlang/markdown")
+sha256sums=("SKIP")
+
+pkgver() {
+	cd "${pkgname%-git}"
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+    install -d "$pkgdir/usr/lib/vmodules/"
+    install -d "$pkgdir/usr/lib/vlang/vlib/"
+    cp -r "${pkgname%-git}" "$pkgdir/usr/lib/vmodules/markdown"
+    ln -s "/usr/lib/vmodules/markdown" "$pkgdir/usr/lib/vlang/vlib"
+}

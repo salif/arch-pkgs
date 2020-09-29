@@ -20,6 +20,6 @@ for dir in "$IN_DIR"/*/; do
     makepkg --force --nosign
     cd $HOME/build/pkgdest/
     for f in *; do
-        cp "$f" "$OUT_DIR"/"$f".temp
+        cp --force "$f" "$OUT_DIR"/"$f".temp
     done
 done
