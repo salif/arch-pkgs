@@ -11,9 +11,9 @@ Add my PGP key with the following commands:
 
 Add the repo to your `/etc/pacman.conf`:
 
-```toml
+```
 [salifm]
-Server = https://salifm_.keybase.pub/linux/arch/$arch
+Server = https://downloads.sourceforge.net/project/arch-pkgs/$arch
 ```
 
 Run the following command:
@@ -24,4 +24,4 @@ Run the following command:
 
 ## List of packages
 
-[keybase.pub/salifm\_/linux/arch/x86\_64](https://keybase.pub/salifm_/linux/arch/x86_64)
+[sourceforge.net/projects/arch-pkgs/files/x86\_64/](https://sourceforge.net/projects/arch-pkgs/files/x86_64/)
