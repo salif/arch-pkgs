@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 scripts="$(dirname $0)"
-source "./arch-pkgs"/.config
+source "./arch-pkgs"/config
 
 [ -z "$M_USER" ] && read -p "M_USER: " M_USER
 

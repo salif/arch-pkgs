@@ -15,8 +15,8 @@ for dir in "$IN_DIR"/*/; do
         SRCPKGDEST=$HOME/build/srcpkgdest \
         LOGDEST=$HOME/build/logdest \
         BUILDDIR=$HOME/build/builddir \
-        PKGEXT=".pkg.tar.zst" \
-        SRCEXT=".src.tar.zst" \
+        PKGEXT=".pkg.tar.$PEXT" \
+        SRCEXT=".src.tar.$PEXT" \
     makepkg --force --nosign
     cd $HOME/build/pkgdest/
     for f in *; do

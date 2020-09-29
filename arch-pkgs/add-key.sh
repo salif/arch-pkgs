@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 scripts="$(dirname $0)"
-source "$scripts"/.config
+source "$scripts"/config
 
 [ -z "$GKEY" ] && read -p "GKEY: " GKEY
 [ -z "$REPO_DIR" ] && read -p "REPO_DIR: " REPO_DIR

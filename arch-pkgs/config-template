@@ -1,0 +1,8 @@
+PGER=${PGER:-""}
+GKEY=${GKEY:-""}
+M_USER=${M_USER:-""}
+IN_DIR=${IN_DIR:-""}
+OUT_DIR=${OUT_DIR:-""}
+REPO_DIR=${REPO_DIR:-""}
+DB_NAME=${DB_NAME:-""}
+PEXT=${PEXT:-"zst"}

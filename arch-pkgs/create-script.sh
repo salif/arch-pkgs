@@ -8,6 +8,6 @@ fname="$scripts"/"$name".sh
 echo "#!/usr/bin/env bash
 
 scripts=\"\$(dirname \$0)\"
-source \"\$scripts\"/.config
+source \"\$scripts\"/config
 " >> "$fname"
 chmod +x "$fname"
