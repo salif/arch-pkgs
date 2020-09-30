@@ -1,8 +1,0 @@
-PGER=${PGER:-"Salif Mehmed <salifm@protonmail.com>"}
-GKEY=${GKEY:-7C81F2D0E02B7A15}
-M_USER=${M_USER:-arch-pkgs}
-IN_DIR=${IN_DIR:-/var/shared/arch-pkgs/in}
-OUT_DIR=${OUT_DIR:-/var/shared/arch-pkgs/out}
-REPO_DIR=${REPO_DIR:-/run/user/1000/keybase/kbfs/public/salifm_/linux/arch/x86_64}
-DB_NAME=${DB_NAME:-salifm}
-PEXT=${PEXT:-"zst"}

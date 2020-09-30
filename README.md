@@ -5,6 +5,7 @@
 Add my PGP key with the following commands:
 
 ```console
+# pacman-key --init
 # pacman-key --keyserver "hkps://keyserver.ubuntu.com" --recv-keys 7C81F2D0E02B7A15
 # pacman-key --lsign-key 7C81F2D0E02B7A15
 ```
@@ -23,5 +24,13 @@ Run the following command:
 ```
 
 ## List of packages
+
+Run this command to view a list of all packages:
+
+```console
+pacman -Sl salifm
+```
+
+or visit:
 
 [sourceforge.net/projects/arch-pkgs/files/x86\_64/](https://sourceforge.net/projects/arch-pkgs/files/x86_64/)
