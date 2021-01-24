@@ -1,0 +1,24 @@
+pkgbase = some-fonts
+	pkgdesc = Some fonts
+	pkgver = 1.210124.0
+	pkgrel = 1
+	url = https://example.com/
+	arch = any
+	license = unknown
+	makedepends = jq
+	depends = gnupg
+	noextract = ttf.tar
+	noextract = otf.tar
+	source = ttf.tar
+	source = otf.tar
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = some-otf-fonts
+	pkgdesc = Some otf fonts
+	install = otf.install
+
+pkgname = some-ttf-fonts
+	pkgdesc = Some ttf fonts
+	install = ttf.install
+

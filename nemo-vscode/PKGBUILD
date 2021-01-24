@@ -1,0 +1,16 @@
+# Maintainer: Salif Mehmed <mail@salif.eu>
+pkgname=nemo-vscode
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='Nemo extension to open folder in VSCode'
+arch=('any')
+url='https://example.com/'
+license=('Unlicense')
+depends=('nemo' 'vscode')
+provides=('nemo-vscode')
+source=('vscode.nemo_action')
+md5sums=('a08078fdf627eac005d6a57851d11db3')
+
+package() {
+	install -Dm644 -t "$pkgdir"/usr/share/nemo/actions/ vscode.nemo_action
+}

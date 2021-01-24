@@ -1,0 +1,15 @@
+pkgbase = nemo-vscode
+	pkgdesc = Nemo extension to open folder in VSCode
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://example.com/
+	arch = any
+	license = Unlicense
+	depends = nemo
+	depends = vscode
+	provides = nemo-vscode
+	source = vscode.nemo_action
+	md5sums = a08078fdf627eac005d6a57851d11db3
+
+pkgname = nemo-vscode
+

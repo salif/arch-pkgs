@@ -1,0 +1,13 @@
+pkgbase = hasher
+	pkgdesc = Cli tool for hashing passwords
+	pkgver = 1.2.0
+	pkgrel = 2
+	url = https://salifm.github.io/hasher
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	source = hasher-1.2.0.tar.gz::https://github.com/salifm/hasher/archive/v1.2.0.tar.gz
+	sha256sums = 2b122fa60262ad8ebbbc6edae58fd8b1861a2750cc47fbff3e12e051289ba0c7
+
+pkgname = hasher
+

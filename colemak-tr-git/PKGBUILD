@@ -1,0 +1,27 @@
+# Maintainer: Salif Mehmed <salifm@protonmail.com>
+pkgname=colemak-tr-git
+pkgver=r5.13c54fe
+pkgrel=1
+pkgdesc='Colemak for the Turkish alphabet'
+arch=('any')
+url='https://salifm.github.io/colemak-tr'
+license=('custom')
+depends=('xkeyboard-config' 'patch')
+makedepends=('git')
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+install=colemak-tr-git.install
+source=('colemak-tr::git+https://github.com/salifm/colemak-tr#branch=main')
+md5sums=('SKIP')
+
+pkgver() {
+	cd "$srcdir/${pkgname%-git}"
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	cd "$srcdir/${pkgname%-git}"
+    install -Dm644 linux/tr.patch "$pkgdir"/usr/share/${pkgname%-git}/linux/tr.patch
+    install -Dm644 linux/evdev.xml.patch "$pkgdir"/usr/share/${pkgname%-git}/linux/evdev.xml.patch
+	install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/${pkgname%-git}/LICENSE
+}

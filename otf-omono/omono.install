@@ -1,8 +1,0 @@
-post_install() {
-cat << EOM
-
-==> To finish the installation, run the following commands:
-==> cd /usr/share/otf-omono; ./install.sh
-
-EOM
-}

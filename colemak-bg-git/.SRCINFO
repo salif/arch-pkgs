@@ -1,0 +1,18 @@
+pkgbase = colemak-bg-git
+	pkgdesc = Colemak for the Bulgarian alphabet
+	pkgver = r20.fedb366
+	pkgrel = 1
+	url = https://salifm.github.io/colemak-bg
+	install = colemak-bg-git.install
+	arch = any
+	license = custom
+	makedepends = git
+	depends = xkeyboard-config
+	depends = patch
+	provides = colemak-bg
+	conflicts = colemak-bg
+	source = colemak-bg::git+https://github.com/salifm/colemak-bg#branch=main
+	md5sums = SKIP
+
+pkgname = colemak-bg-git
+

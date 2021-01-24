@@ -1,9 +1,0 @@
-post_install() {
-cat << EOM
-
-==> colemak-bg post-install message:
-==> To finish the installation, run the following command:
-==> cd /usr/share/colemak-bg; sudo ./install.sh
-
-EOM
-}

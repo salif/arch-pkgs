@@ -1,36 +1,14 @@
 # Personal Arch Linux Repository
 
-## Add the repo
-
-Add my PGP key with the following commands:
+## Init
 
 ```console
-# pacman-key --init
-# pacman-key --keyserver "hkps://keyserver.ubuntu.com" --recv-keys 7C81F2D0E02B7A15
-# pacman-key --lsign-key 7C81F2D0E02B7A15
+mkdir _pkg
+docker build -t arch-pkgs ./_src
 ```
 
-Add the repo to your `/etc/pacman.conf`:
-
-```
-[salifm]
-Server = https://downloads.sourceforge.net/project/arch-pkgs/$arch
-```
-
-Run the following command:
+## Build package
 
 ```console
-# pacman -Syy
+./_src/build.sh
 ```
-
-## List of packages
-
-Run this command to view a list of all packages:
-
-```console
-pacman -Sl salifm
-```
-
-or visit:
-
-[sourceforge.net/projects/arch-pkgs/files/x86\_64/](https://sourceforge.net/projects/arch-pkgs/files/x86_64/)

@@ -1,0 +1,18 @@
+pkgbase = colemak-tr-git
+	pkgdesc = Colemak for the Turkish alphabet
+	pkgver = r5.13c54fe
+	pkgrel = 1
+	url = https://salifm.github.io/colemak-tr
+	install = colemak-tr-git.install
+	arch = any
+	license = custom
+	makedepends = git
+	depends = xkeyboard-config
+	depends = patch
+	provides = colemak-tr
+	conflicts = colemak-tr
+	source = colemak-tr::git+https://github.com/salifm/colemak-tr#branch=main
+	md5sums = SKIP
+
+pkgname = colemak-tr-git
+

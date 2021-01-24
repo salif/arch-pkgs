@@ -1,0 +1,32 @@
+# Maintainer: Salif Mehmed <mail@salif.eu>
+pkgname=('some-otf-fonts' 'some-ttf-fonts')
+pkgbase=some-fonts
+pkgver=1.210124.0
+pkgrel=1
+pkgdesc='Some fonts'
+arch=('any')
+url='https://example.com/'
+license=('unknown')
+depends=('gnupg')
+makedepends=()
+source=('ttf.tar' 'otf.tar')
+noextract=('ttf.tar' 'otf.tar')
+sha256sums=('SKIP' 'SKIP')
+
+build() {
+    _password=$(echo -n "$_PASS" | tr '[:upper:]' '[:lower:]')
+    echo -n "$_password" | gpg --use-agent --batch --symmetric --passphrase-fd 0 --cipher-algo AES256 -o ttf ttf.tar
+    echo -n "$_password" | gpg --use-agent --batch --symmetric --passphrase-fd 0 --cipher-algo AES256 -o otf otf.tar
+}
+
+package_some-otf-fonts() {
+    pkgdesc="Some otf fonts"
+    install="otf.install"
+    install -Dm644 "otf" "$pkgdir/usr/share/$pkgbase/otf.gpg"
+}
+
+package_some-ttf-fonts() {
+	pkgdesc="Some ttf fonts"
+    install="ttf.install"
+    install -Dm644 "ttf" "$pkgdir/usr/share/$pkgbase/ttf.gpg"
+}
