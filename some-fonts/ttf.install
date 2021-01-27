@@ -1,15 +1,15 @@
 post_install() {
-    if [ -z "$PASS" ]; then
+    if [ -z "$AP_PASS" ]; then
         >&2 echo "
             Error!
 
-        \$PASS env variable not found!
-        Please reinstall this package with \`sudo PASS='value' pacman -U ...\`, 
+        \$AP_PASS env variable not found!
+        Please reinstall this package with \`sudo _PASS='value' pacman -U ...\`, 
         replace 'value' with the BTW sentence, you know what it is :)
         "
         exit 1
     else
-        echo -n $(echo -n "$PASS" | tr '[:upper:]' '[:lower:]') | gpg --use-agent --batch --decrypt --passphrase-fd 0 -o /usr/share/some-fonts/ttf.tar /usr/share/some-fonts/ttf.gpg
+        echo -n $(echo -n "$AP_PASS" | tr '[:upper:]' '[:lower:]') | gpg --use-agent --batch --decrypt --passphrase-fd 0 -o /usr/share/some-fonts/ttf.tar /usr/share/some-fonts/ttf.gpg
         tar -xvf /usr/share/some-fonts/ttf.tar -C /usr/share/some-fonts/
         find /usr/share/some-fonts/ttf/*.ttf -printf "%f\n" > /usr/share/some-fonts/ttf.txt
         install -Dm644 -t /usr/share/fonts/TTF /usr/share/some-fonts/ttf/*.ttf

@@ -1,0 +1,4 @@
+
+pre_remove() {
+    cp -f /etc/ap-tools.conf /etc/ap-tools.conf.old
+}

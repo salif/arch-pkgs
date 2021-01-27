@@ -1,0 +1,25 @@
+# Maintainer: Salif Mehmed <mail@salif.eu>
+pkgname=arch-pkgs-tools-git # '-bzr', '-git', '-hg' or '-svn'
+pkgver=r4.e0ba7ca
+pkgrel=1
+pkgdesc="arch-pkgs-tools"
+arch=('any')
+url="https://github.com/salifm/arch-pkgs-tools"
+license=('MIT')
+depends=('docker' 'gnupg')
+makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+install=arch-pkgs.install
+source=("${pkgname%-git}::git+https://github.com/salifm/arch-pkgs-tools")
+md5sums=('SKIP')
+
+pkgver() {
+	cd "$srcdir/${pkgname%-git}"
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	cd "$srcdir/${pkgname%-git}"
+	./install "$pkgdir"
+}
