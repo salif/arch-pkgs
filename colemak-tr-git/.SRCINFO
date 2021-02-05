@@ -1,6 +1,6 @@
 pkgbase = colemak-tr-git
 	pkgdesc = Colemak for the Turkish alphabet
-	pkgver = r5.13c54fe
+	pkgver = r6.61d1cd0
 	pkgrel = 1
 	url = https://salifm.github.io/colemak-tr
 	install = colemak-tr-git.install

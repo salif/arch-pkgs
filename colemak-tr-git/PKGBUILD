@@ -1,6 +1,6 @@
 # Maintainer: Salif Mehmed <salifm@protonmail.com>
 pkgname=colemak-tr-git
-pkgver=r5.13c54fe
+pkgver=r6.61d1cd0
 pkgrel=1
 pkgdesc='Colemak for the Turkish alphabet'
 arch=('any')

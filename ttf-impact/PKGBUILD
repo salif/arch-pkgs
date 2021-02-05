@@ -1,0 +1,15 @@
+# Maintainer: Salif Mehmed <mail@salif.eu>
+pkgname=('ttf-impact')
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='Impact font'
+arch=('any')
+url='https://www.wfonts.com/font/impact'
+license=('unknown')
+source=('https://www.wfonts.com/download/data/2014/05/29/impact/impact.zip')
+md5sums=('57f5d15f5e491895505613699abe2db6')
+
+package() {
+	install -Dm644 -t "$pkgdir/usr/share/fonts/TTF/" *.ttf
+}
+
