@@ -1,9 +1,0 @@
-post_install() {
-	patch -ub /usr/share/X11/xkb/symbols/bg /usr/share/colemak-bg/linux/bg.patch
-	patch -ub /usr/share/X11/xkb/rules/evdev.xml /usr/share/colemak-bg/linux/evdev.xml.patch
-}
-
-post_remove() {
-	mv /usr/share/X11/xkb/symbols/bg.orig /usr/share/X11/xkb/symbols/bg
-	mv /usr/share/X11/xkb/rules/evdev.xml.orig /usr/share/X11/xkb/rules/evdev.xml
-}

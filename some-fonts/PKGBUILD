@@ -11,7 +11,7 @@ depends=('gnupg')
 makedepends=()
 source=('otf.tar' 'ttf.tar')
 noextract=('otf.tar' 'ttf.tar')
-md5sums=('b2d83480a1a33381cf3009293d90fb69' '02b21030eb6165ff66a77679c6a2fcef')
+md5sums=('c6fc9da164f50c0640cf3c8c3bf49ada' '02b21030eb6165ff66a77679c6a2fcef')
 
 build() {
     ap_password=$(echo -n "$AP_PASS" | tr '[:upper:]' '[:lower:]')

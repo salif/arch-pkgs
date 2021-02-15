@@ -1,0 +1,26 @@
+# Maintainer: Salif Mehmed <mail@salif.eu>
+pkgname=xkc-installer-git # '-bzr', '-git', '-hg' or '-svn'
+pkgver=r2.567afab
+pkgrel=1
+pkgdesc="Keyboard layout installer"
+arch=('any')
+url="https://github.com/salif/xkc-installer"
+license=('MIT')
+depends=('bash')
+makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+source=("${pkgname%-git}::git+https://github.com/salif/xkc-installer")
+md5sums=('SKIP')
+
+pkgver() {
+	cd "$srcdir/${pkgname%-git}"
+# Git, no tags available
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	cd "$srcdir/${pkgname%-git}"
+	install -Dm755 installer.bash "$pkgdir"/usr/bin/xkc-installer
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

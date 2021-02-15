@@ -4,14 +4,14 @@ pkgver=r4.e0ba7ca
 pkgrel=1
 pkgdesc="arch-pkgs-tools"
 arch=('any')
-url="https://github.com/salifm/arch-pkgs-tools"
+url="https://github.com/salif/arch-pkgs-tools"
 license=('MIT')
 depends=('docker' 'gnupg')
 makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 install=arch-pkgs.install
-source=("${pkgname%-git}::git+https://github.com/salifm/arch-pkgs-tools")
+source=("${pkgname%-git}::git+https://github.com/salif/arch-pkgs-tools")
 md5sums=('SKIP')
 
 pkgver() {

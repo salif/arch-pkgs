@@ -1,9 +1,0 @@
-post_install() {
-	patch -ub /usr/share/X11/xkb/symbols/tr /usr/share/colemak-tr/linux/tr.patch
-	patch -ub /usr/share/X11/xkb/rules/evdev.xml /usr/share/colemak-tr/linux/evdev.xml.patch
-}
-
-post_remove() {
-	mv /usr/share/X11/xkb/symbols/tr.orig /usr/share/X11/xkb/symbols/tr
-	mv /usr/share/X11/xkb/rules/evdev.xml.orig /usr/share/X11/xkb/rules/evdev.xml
-}

@@ -10,7 +10,7 @@ pkgbase = some-fonts
 	noextract = ttf.tar
 	source = otf.tar
 	source = ttf.tar
-	md5sums = b2d83480a1a33381cf3009293d90fb69
+	md5sums = c6fc9da164f50c0640cf3c8c3bf49ada
 	md5sums = 02b21030eb6165ff66a77679c6a2fcef
 
 pkgname = some-otf-fonts
