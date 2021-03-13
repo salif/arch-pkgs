@@ -1,6 +1,6 @@
 # Maintainer: Salif Mehmed <mail@salif.eu>
 pkgname=arch-pkgs-tools-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=r4.e0ba7ca
+pkgver=r5.8a602e3
 pkgrel=1
 pkgdesc="arch-pkgs-tools"
 arch=('any')
