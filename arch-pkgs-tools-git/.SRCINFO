@@ -1,8 +1,8 @@
 pkgbase = arch-pkgs-tools-git
 	pkgdesc = arch-pkgs-tools
-	pkgver = r4.e0ba7ca
+	pkgver = r7.6b0ff1f
 	pkgrel = 1
-	url = https://github.com/salifm/arch-pkgs-tools
+	url = https://github.com/salif/arch-pkgs-tools
 	install = arch-pkgs.install
 	arch = any
 	license = MIT
@@ -11,7 +11,7 @@ pkgbase = arch-pkgs-tools-git
 	depends = gnupg
 	provides = arch-pkgs-tools
 	conflicts = arch-pkgs-tools
-	source = arch-pkgs-tools::git+https://github.com/salifm/arch-pkgs-tools
+	source = arch-pkgs-tools::git+https://github.com/salif/arch-pkgs-tools
 	md5sums = SKIP
 
 pkgname = arch-pkgs-tools-git

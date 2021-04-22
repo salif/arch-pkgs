@@ -1,13 +1,13 @@
 # Maintainer: Salif Mehmed <mail@salif.eu>
 pkgname=hasher-bin
-pkgver=1.0.0
+pkgver=1.4.0
 pkgrel=1
 pkgdesc="Library and cli tool for password hashing"
 arch=('x86_64')
 url="https://salif.github.io/hasher"
 license=('MIT')
 source=("https://github.com/salif/hasher/releases/download/v$pkgver/hasher-linux-$arch.tar.zst")
-md5sums=('01839d5622f79b8c21ebd036e48568f1')
+md5sums=('1c583554196fbb24d53be5179170093d')
 
 package() {
 	cd "hasher-linux-$arch"

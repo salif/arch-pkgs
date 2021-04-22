@@ -1,14 +1,3 @@
 # Personal Arch Linux Repository
 
-## Init
-
-```console
-mkdir _pkg
-docker build -t arch-pkgs ./_src
-```
-
-## Build package
-
-```console
-./_src/build.sh
-```
+The packages can be build and installed with [arch-pkgs-tools](https://github.com/salif/arch-pkgs-tools)
